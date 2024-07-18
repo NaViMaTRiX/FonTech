@@ -1,0 +1,15 @@
+﻿namespace FonTech.Domain.Entity;
+
+using Interfaces;
+
+public class User : IEntity<long>, IAuditable
+{
+    public long Id { get; set; }
+    public string Login { get; set; }
+    public string Password { get; set; }
+    public List<Report> Reports { get; set; }
+    public DateTime CreatedAt { get; set; }
+    public DateTime? UpdatedAt { get; set; }
+    public long CreatedBy { get; set; }
+    public long? UpdatedBy { get; set; }
+}
